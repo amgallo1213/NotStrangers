@@ -241,9 +241,60 @@ figure:hover .grid-button-wrapper {
     transform: translate3d(0, 0, 0);
 }
 
+/* NAVBAR */
+
+nav {
+    height: 80px;
+    margin-top: 64px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #fff;
+}
+
+.nav_links  {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.nav_links li   {
+    color: #00032A;
+    font-family: "Josefin Sans", sans-serif;
+    padding: 8px;
+
+    &:hover {
+        color: #D3BAC5;
+        cursor: pointer;
+    }
+}
 
 
+/* MAIN  */
 
+main    {
+    z-index: -15;
+}
+
+
+/* ABOUT SECTION  */
+
+#about  {
+    height: 450px;
+    /* background-color: #D3BAC5; */
+}
+
+/* PRODUCTS */
+
+#products   {
+    height: 900px;
+    background-color: #143887;
+}
 
 
 
