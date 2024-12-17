@@ -35,6 +35,7 @@ li  {
 /* --------HERO------- */
 
 .hero_container {
+    margin-top: 48px;
     width: 100vw;
     display: flex;
     flex-direction: row;
@@ -75,29 +76,39 @@ li  {
 }
 #hero_img_four  {
     grid-column: 1 / span 1;
-    grid-row: 2 / span 1;
-    /* background-color: rgb(26, 125, 150); */
 }
 
 #hero_img_five   {
     grid-column: 2 / span 1;
-    background-color: rgb(132, 216, 152);
+}
+
+#focus-statement {
+    color: #00032A;
+    font-family: "Playfair Display", serif;
+}
+.text_container {
+    text-align: center;
+    vertical-align: center;
+    width: 50%;
 }
 
 #hero_img_six   {
     grid-column: 3 / span 1;
-    grid-row: 2 / span 1;
-    /* background-color: rgb(210, 70, 60); */
 }
 
 #hero_img_seven {
     grid-column: 1 / span 1;
     grid-row: 3 / span 1;
-    /* background-color: cornflowerblue; */
 }
 
 #hero_img_eight {
     grid-column: 2 / span 2;
+}
+
+.hero_h2  {
+    font-weight: 900;
+        color: #fff;
+        text-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
 }
 
 figure {
@@ -106,6 +117,134 @@ figure {
     text-align: center;
     cursor: pointer;
 }
+
+figure figcaption {
+    color: #fff;
+    backface-visibility: hidden;
+}
+
+figure figcaption::before,
+figure figcaption::after {
+    pointer-events: none;
+}
+
+figure figcaption,
+figure figcaption>a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+figure figcaption>a {
+    z-index: 1000;
+    text-indent: 200%;
+    white-space: nowrap;
+    font-size: 0;
+    opacity: 0;
+}
+
+figure h2 {
+    word-spacing: -0.15em;
+    font-weight: 300;
+}
+
+figure h2 span {
+    font-weight: 800;
+}
+
+figure h2,
+figure p {
+    margin: 0;
+}
+
+figure button.rww_grid_button {
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    margin: 0 auto;
+    padding: 0.5rem;
+    font-weight: bold;
+    font-size: smaller;
+    color: #fff;
+    text-transform: uppercase;
+    transition: all 0.3s;
+}
+
+figure p {
+    letter-spacing: 1px;
+    font-size: smaller;
+}
+
+figure figcaption::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,
+            rgba(72, 76, 97, 0) 0%,
+            rgba(72, 76, 97, 0.8) 75%);
+    content: "";
+    opacity: 0;
+    transform: translate3d(0, 50%, 0);
+}
+
+figure h2 {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    color: #484c61;
+    transition: all 0.35s;
+    transform: translate3d(0, -50%, 0);
+}
+
+figure figcaption::before,
+figure p,
+figure .grid-button-wrapper {
+    transition: all 0.35s;
+}
+
+figure .grid-button-wrapper {
+    position: absolute;
+    bottom: 35%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+}
+
+figure p {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    padding-bottom: 3rem;
+    width: 100%;
+    opacity: 0;
+    transform: translate3d(0, 10px, 0);
+}
+
+figure:hover h2 {
+    background: none;
+    color: #fff;
+    transform: translate3d(0, -50%, 0) translate3d(0, -40px, 0);
+}
+
+figure:hover figcaption::before,
+figure:hover p,
+figure:hover .grid-button-wrapper {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+
+
+
+
 
 
 /* FOOTER  */
