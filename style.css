@@ -4,6 +4,10 @@
     padding: 0;
 }
 
+html    {
+    scroll-padding: 10rem;
+}
+
 
 h1  {
     font-family: "Josefin Sans", sans-serif;
@@ -85,6 +89,8 @@ li  {
 #focus-statement {
     color: #00032A;
     font-family: "Playfair Display", serif;
+    place-content: center;
+    text-align: center;
 }
 .text_container {
     text-align: center;
@@ -293,7 +299,48 @@ main    {
 
 #products   {
     height: 900px;
-    background-color: #143887;
+    /* background-color: #143887; */
+}
+
+#product_container  {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 310px;
+    width: 240px;
+    padding: 24px;
+    margin: 8px;
+    border: 0.5px solid black;
+    transition: all 0.3s ease;
+
+    &:hover {
+        /* border: 0.5px solid black; */
+        cursor: pointer;
+        box-shadow: rgba(0, 0, 0, 0.15) 2px 2px 3px;
+    }
+}
+
+.card_img   {
+    display: block;
+    max-width: 100%;
+    object-fit: cover;
+    aspect-ratio: 1;
+    overflow: hidden;
+}
+
+.card_name  {
+    padding-top: 16px;
+}
+
+.keyWords   {
+    font-size: 1rem;
+    padding-top: 8px;
+    /* font-family: "Josefin Sans", sans-serif; */
 }
 
 
@@ -323,4 +370,12 @@ footer  {
 #email  {
     font-family: "Josefin Sans", sans-serif;
     margin: 4px 0;
+}
+
+
+
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
 }
