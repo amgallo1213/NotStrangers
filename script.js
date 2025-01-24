@@ -10,7 +10,7 @@ async function displayPerfumes() {
         perfumes.map((perfume) => {
             cardContainer.innerHTML += `
         <div class="card">
-          <img src="${perfume.img}" class="img">
+          <img src="${perfume.img}" class="card_img">
           <h2 class="card_name">${perfume.name}</h2>
           <p class="keyWords">${perfume.keyWords}</p>
         </div>
